@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteTools Pro - Free PDF Converter, Image Compressor & SEO Tools</title>
+    <meta name="description" content="Free online PDF to Word converter, PDF merger, PDF splitter, image compressor and SEO content generator. Premium tools for document processing and content creation.">
+    <meta name="keywords" content="pdf to word, word to pdf, pdf merger, pdf splitter, image compressor, seo tools, content generator, free online tools">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1e3a8a;
+            --gold: #fbbf24;
+            --white: #ffffff;
+            --light-navy: #3b82f6;
+            --dark-navy: #1e40af;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--navy), var(--dark-navy));
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav li {
+            color: var(--white);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: var(--radius);
+        }
+
+        nav li:hover {
+            background: rgba(251, 191, 36, 0.2);
+            color: var(--gold);
+        }
+
+        /* Ad Units */
+        .ad-unit {
+            background: var(--white);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .ad-label {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .ad-banner {
+            width: 100%;
+            height: 90px;
+            background: linear-gradient(135deg, var(--navy), var(--light-navy));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--navy), var(--dark-navy));
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #f59e0b);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.6);
+        }
+
+        /* Tools Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tools {
+            padding: 5rem 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 12px 25px rgba(30, 58, 138, 0.2);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .tool-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tool Pages */
+        .tool-page {
+            display: none;
+            padding: 3rem 0;
+        }
+
+        .tool-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .tool-header h1 {
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .tool-interface {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 2px solid var(--light-gray);
+        }
+
+        .upload-area {
+            border: 3px dashed var(--light-navy);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: var(--light-gray);
+        }
+
+        .upload-area:hover {
+            border-color: var(--gold);
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        .upload-area i {
+            font-size: 3.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .option-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .option-group select, .option-group input, .option-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .option-group select:focus, .option-group input:focus {
+            border-color: var(--navy);
+            outline: none;
+        }
+
+        .process-btn {
+            background: linear-gradient(135deg, var(--navy), var(--dark-navy));
+            color: var(--white);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .process-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(30, 58, 138, 0.4);
+        }
+
+        .back-to-home {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* File List for PDF Merger */
+        .file-list {
+            margin: 1rem 0;
+        }
+
+        .file-item {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .file-item .file-name {
+            flex: 1;
+        }
+
+        .file-item .remove-file {
+            color: #ef4444;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--navy), var(--dark-navy));
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-crown"></i>
+                    <span>EliteTools Pro</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li data-page="home"><i class="fas fa-home"></i></li>
+                        <li data-page="pdf-tools"><i class="fas fa-file-pdf"></i></li>
+                        <li data-page="image-tools"><i class="fas fa-image"></i></li>
+                        <li data-page="content-tools"><i class="fas fa-hashtag"></i></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Ad -->
+    <div class="container">
+        <div class="ad-unit">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-banner" id="header-ad">
+                Premium Tools - Free Forever! No Sign Up Required.
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home-page">
+        <div class="container">
+            <div class="hero-content">
+                <h1>All-in-One Premium Productivity Suite</h1>
+                <p>Free PDF conversion, image optimization, and SEO content generation tools. No registration required.</p>
+                <a href="#tools" class="cta-button">Start Using Free Tools <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Ad -->
+    <div class="container">
+        <div class="ad-unit">
+            <div class="ad-label">Sponsored</div>
+            <div class="ad-banner" id="middle-ad">
+                Upgrade to EliteTools Pro Premium - Advanced Features Available!
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <section class="tools" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Tools Collection</h2>
+                <p>Professional-grade tools for all your document processing and content creation needs</p>
+            </div>
+            <div class="tools-grid">
+                <!-- PDF Tools -->
+                <div class="tool-card" data-tool="pdf-converter">
+                    <div class="tool-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>PDF Converter</h3>
+                    <p>Convert PDF to Word and Word to PDF with perfect formatting</p>
+                </div>
+                <div class="tool-card" data-tool="pdf-merger">
+                    <div class="tool-icon">
+                        <i class="fas fa-object-group"></i>
+                    </div>
+                    <h3>PDF Merger</h3>
+                    <p>Combine multiple PDF files into a single document</p>
+                </div>
+                <div class="tool-card" data-tool="pdf-splitter">
+                    <div class="tool-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>PDF Splitter</h3>
+                    <p>Split PDF files into smaller documents or extract pages</p>
+                </div>
+
+                <!-- Image Tools -->
+                <div class="tool-card" data-tool="image-compressor">
+                    <div class="tool-icon">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                    </div>
+                    <h3>Image Compressor</h3>
+                    <p>Reduce image file size without quality loss</p>
+                </div>
+
+                <!-- Content Tools -->
+                <div class="tool-card" data-tool="seo-content">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Content</h3>
+                    <p>Generate SEO-optimized titles, descriptions and tags</p>
+                </div>
+                <div class="tool-card" data-tool="social-content">
+                    <div class="tool-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>Create engaging posts and captions for social platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TOOL PAGES ==================== -->
+
+    <!-- PDF Converter Tool -->
+    <section class="tool-page" id="pdf-converter-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>PDF Converter</h1>
+                <p>Convert between PDF and Word formats while preserving all formatting</p>
+            </div>
+            <div class="tool-interface">
+                <div class="upload-area" id="pdf-converter-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload Your Document</h3>
+                    <p>Drag & drop your PDF or Word file here or click to browse</p>
+                    <p class="file-info">Supported: PDF, DOC, DOCX (Max 50MB)</p>
+                </div>
+                <div class="option-group">
+                    <label for="conversion-type">Conversion Type</label>
+                    <select id="conversion-type">
+                        <option value="pdf-to-word">PDF to Word Document</option>
+                        <option value="word-to-pdf">Word to PDF Document</option>
+                    </select>
+                </div>
+                <button class="process-btn" id="convert-btn">
+                    <i class="fas fa-sync-alt"></i> Convert Document
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Merger Tool -->
+    <section class="tool-page" id="pdf-merger-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>PDF Merger</h1>
+                <p>Combine multiple PDF files into a single document in your preferred order</p>
+            </div>
+            <div class="tool-interface">
+                <div class="upload-area" id="pdf-merger-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload PDF Files</h3>
+                    <p>Click to select multiple PDF files or drag & drop them here</p>
+                    <p class="file-info">Select 2 or more PDF files (Max 50MB each)</p>
+                </div>
+                <div class="file-list" id="merger-file-list">
+                    <!-- Files will be listed here -->
+                </div>
+                <button class="process-btn" id="merge-btn">
+                    <i class="fas fa-object-group"></i> Merge PDF Files
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Splitter Tool -->
+    <section class="tool-page" id="pdf-splitter-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>PDF Splitter</h1>
+                <p>Split large PDF files into smaller documents or extract specific pages</p>
+            </div>
+            <div class="tool-interface">
+                <div class="upload-area" id="pdf-splitter-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload PDF File</h3>
+                    <p>Drag & drop your PDF file here or click to browse</p>
+                    <p class="file-info">Supported: PDF files (Max 50MB)</p>
+                </div>
+                <div class="option-group">
+                    <label for="split-pages">Pages to Extract (e.g., 1-5, 8, 10-15)</label>
+                    <input type="text" id="split-pages" placeholder="1-5, 8, 10-15">
+                </div>
+                <button class="process-btn" id="split-btn">
+                    <i class="fas fa-cut"></i> Split PDF File
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Compressor Tool -->
+    <section class="tool-page" id="image-compressor-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>Image Compressor</h1>
+                <p>Optimize your images for web with intelligent compression</p>
+            </div>
+            <div class="tool-interface">
+                <div class="upload-area" id="image-compressor-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload Your Image</h3>
+                    <p>Drag & drop your image here or click to browse</p>
+                    <p class="file-info">Supported: JPG, PNG, GIF, WebP (Max 50MB)</p>
+                </div>
+                <div class="option-group">
+                    <label for="compression-level">Compression Level</label>
+                    <select id="compression-level">
+                        <option value="low">Low Compression (Best Quality)</option>
+                        <option value="medium" selected>Medium Compression (Recommended)</option>
+                        <option value="high">High Compression (Smallest Size)</option>
+                    </select>
+                </div>
+                <button class="process-btn" id="compress-btn">
+                    <i class="fas fa-compress-arrows-alt"></i> Compress Image
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Tool -->
+    <section class="tool-page" id="seo-content-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>SEO Content Generator</h1>
+                <p>Create optimized content for better search engine rankings</p>
+            </div>
+            <div class="tool-interface">
+                <div class="option-group">
+                    <label for="seo-keyword">Main Keyword/Topic</label>
+                    <input type="text" id="seo-keyword" placeholder="Enter your main keyword or topic">
+                </div>
+                <div class="option-group">
+                    <label for="seo-tone">Content Tone</label>
+                    <select id="seo-tone">
+                        <option value="professional">Professional</option>
+                        <option value="casual">Casual/Friendly</option>
+                        <option value="persuasive">Persuasive</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="seo-platform">Target Platform</label>
+                    <select id="seo-platform">
+                        <option value="website">Website/Blog</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="linkedin">LinkedIn</option>
+                    </select>
+                </div>
+                <button class="process-btn" id="generate-seo-btn">
+                    <i class="fas fa-magic"></i> Generate SEO Content
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Content Tool -->
+    <section class="tool-page" id="social-content-page">
+        <div class="container">
+            <a href="#" class="back-to-home" data-page="home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="tool-header">
+                <h1>Social Media Content Generator</h1>
+                <p>Create engaging posts and captions for social media platforms</p>
+            </div>
+            <div class="tool-interface">
+                <div class="option-group">
+                    <label for="social-platform">Social Media Platform</label>
+                    <select id="social-platform">
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="tiktok">TikTok</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="social-topic">Content Topic</label>
+                    <input type="text" id="social-topic" placeholder="Enter your content topic">
+                </div>
+                <div class="option-group">
+                    <label for="social-tone">Content Tone</label>
+                    <select id="social-tone">
+                        <option value="professional">Professional</option>
+                        <option value="casual">Casual/Friendly</option>
+                        <option value="funny">Funny/Humorous</option>
+                        <option value="inspirational">Inspirational</option>
+                    </select>
+                </div>
+                <button class="process-btn" id="generate-social-btn">
+                    <i class="fas fa-hashtag"></i> Generate Social Content
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Ad -->
+    <div class="container">
+        <div class="ad-unit">
+            <div class="ad-label">Premium Features</div>
+            <div class="ad-banner" id="footer-ad">
+                Join 50,000+ Users Trusting EliteTools Pro!
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EliteTools Pro</h3>
+                    <p>Your all-in-one solution for document processing, image optimization, and content creation.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Tools</h3>
+                    <ul>
+                        <li><a href="#" data-tool="pdf-converter">PDF to Word Converter</a></li>
+                        <li><a href="#" data-tool="pdf-merger">PDF Merger</a></li>
+                        <li><a href="#" data-tool="pdf-splitter">PDF Splitter</a></li>
+                        <li><a href="#" data-tool="image-compressor">Image Compressor</a></li>
+                        <li><a href="#" data-tool="seo-content">SEO Content Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 EliteTools Pro. All rights reserved. | Free Online Tools for Everyone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('nav li').forEach(item => {
+            item.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
+                showPage(page);
+            });
+        });
+
+        // Tool Cards
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const tool = this.getAttribute('data-tool');
+                showToolPage(tool);
+            });
+        });
+
+        // Footer Links
+        document.querySelectorAll('.footer-column a[data-tool]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tool = this.getAttribute('data-tool');
+                showToolPage(tool);
+            });
+        });
+
+        // Back to Home
+        document.querySelectorAll('.back-to-home').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage('home');
+            });
+        });
+
+        // ==================== TOOL FUNCTIONALITY ====================
+
+        // PDF Converter
+        document.getElementById('convert-btn').addEventListener('click', handlePdfConversion);
+        
+        // PDF Merger
+        document.getElementById('pdf-merger-upload').addEventListener('click', handlePdfMergerUpload);
+        document.getElementById('merge-btn').addEventListener('click', handlePdfMerge);
+        
+        // PDF Splitter
+        document.getElementById('split-btn').addEventListener('click', handlePdfSplit);
+        
+        // Image Compressor
+        document.getElementById('compress-btn').addEventListener('click', handleImageCompression);
+        
+        // SEO Content
+        document.getElementById('generate-seo-btn').addEventListener('click', handleSeoContent);
+        
+        // Social Content
+        document.getElementById('generate-social-btn').addEventListener('click', handleSocialContent);
+
+        // PDF Merger Variables
+        let mergerFiles = [];
+
+        function showPage(page) {
+            // Hide all pages
+            document.querySelectorAll('.tool-page').forEach(p => p.style.display = 'none');
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('tools').style.display = 'none';
+            
+            // Show selected page
+            if (page === 'home') {
+                document.getElementById('home-page').style.display = 'block';
+                document.getElementById('tools').style.display = 'block';
+            } else {
+                document.getElementById(`${page}-page`).style.display = 'block';
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function showToolPage(tool) {
+            const pageMap = {
+                'pdf-converter': 'pdf-converter-page',
+                'pdf-merger': 'pdf-merger-page',
+                'pdf-splitter': 'pdf-splitter-page',
+                'image-compressor': 'image-compressor-page',
+                'seo-content': 'seo-content-page',
+                'social-content': 'social-content-page'
+            };
+            
+            if (pageMap[tool]) {
+                showPage(pageMap[tool]);
+            }
+        }
+
+        // PDF Conversion
+        async function handlePdfConversion() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.pdf,.doc,.docx';
+            
+            fileInput.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const formData = new FormData();
+                formData.append('file', file);
+                
+                const conversionType = document.getElementById('conversion-type').value;
+                const endpoint = conversionType === 'pdf-to-word' 
+                    ? '/api/convert-pdf-to-word' 
+                    : '/api/convert-word-to-pdf';
+                
+                try {
+                    const btn = document.getElementById('convert-btn');
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    btn.disabled = true;
+                    
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    if (result.success) {
+                        alert(`✅ ${result.message}\nFile: ${result.fileName}\nSize: ${formatBytes(result.originalSize)} → ${formatBytes(result.convertedSize)}`);
+                    } else {
+                        alert('❌ Conversion failed: ' + result.error);
+                    }
+                } catch (error) {
+                    alert('❌ Conversion failed. Please try again.');
+                } finally {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert Document';
+                }
+            };
+            fileInput.click();
+        }
+
+        // PDF Merger Upload
+        function handlePdfMergerUpload() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.pdf';
+            fileInput.multiple = true;
+            
+            fileInput.onchange = (e) => {
+                const files = Array.from(e.target.files);
+                if (files.length < 2) {
+                    alert('Please select at least 2 PDF files');
+                    return;
+                }
+                
+                mergerFiles = [...mergerFiles, ...files];
+                updateMergerFileList();
+            };
+            fileInput.click();
+        }
+
+        function updateMergerFileList() {
+            const fileList = document.getElementById('merger-file-list');
+            fileList.innerHTML = '';
+            
+            mergerFiles.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <span class="remove-file" onclick="removeMergerFile(${index})">
+                        <i class="fas fa-times"></i>
+                    </span>
+                `;
+                fileList.appendChild(fileItem);
+            });
+        }
+
+        function removeMergerFile(index) {
+            mergerFiles.splice(index, 1);
+            updateMergerFileList();
+        }
+
+        // PDF Merge
+        async function handlePdfMerge() {
+            if (mergerFiles.length < 2) {
+                alert('Please upload at least 2 PDF files');
+                return;
+            }
+            
+            const formData = new FormData();
+            mergerFiles.forEach(file => {
+                formData.append('files', file);
+            });
+            
+            try {
+                const btn = document.getElementById('merge-btn');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Merging...';
+                btn.disabled = true;
+                
+                const response = await fetch('/api/merge-pdfs', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    alert(`✅ ${result.message}\nMerged ${result.mergedCount} files\nTotal size: ${formatBytes(result.finalSize)}`);
+                    mergerFiles = [];
+                    updateMergerFileList();
+                } else {
+                    alert('❌ Merge failed: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ Merge failed. Please try again.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-object-group"></i> Merge PDF Files';
+            }
+        }
+
+        // PDF Split
+        async function handlePdfSplit() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.pdf';
+            
+            fileInput.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const pages = document.getElementById('split-pages').value;
+                if (!pages) {
+                    alert('Please specify pages to extract (e.g., 1-5, 8, 10-15)');
+                    return;
+                }
+                
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('pages', pages);
+                
+                try {
+                    const btn = document.getElementById('split-btn');
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Splitting...';
+                    btn.disabled = true;
+                    
+                    const response = await fetch('/api/split-pdf', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    if (result.success) {
+                        alert(`✅ ${result.message}\nPages: ${result.pages}\nFile: ${result.fileName}`);
+                    } else {
+                        alert('❌ Split failed: ' + result.error);
+                    }
+                } catch (error) {
+                    alert('❌ Split failed. Please try again.');
+                } finally {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-cut"></i> Split PDF File';
+                }
+            };
+            fileInput.click();
+        }
+
+        // Image Compression
+        async function handleImageCompression() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            
+            fileInput.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const formData = new FormData();
+                formData.append('image', file);
+                formData.append('compressionLevel', document.getElementById('compression-level').value);
+                
+                try {
+                    const btn = document.getElementById('compress-btn');
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Compressing...';
+                    btn.disabled = true;
+                    
+                    const response = await fetch('/api/compress-image', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    if (result.success) {
+                        alert(`✅ ${result.message}\nSize reduced by ${result.reductionPercent}%\n${formatBytes(result.originalSize)} → ${formatBytes(result.compressedSize)}`);
+                    } else {
+                        alert('❌ Compression failed: ' + result.error);
+                    }
+                } catch (error) {
+                    alert('❌ Compression failed. Please try again.');
+                } finally {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> Compress Image';
+                }
+            };
+            fileInput.click();
+        }
+
+        // SEO Content Generation
+        async function handleSeoContent() {
+            const keyword = document.getElementById('seo-keyword').value;
+            if (!keyword) {
+                alert('Please enter a keyword/topic');
+                return;
+            }
+            
+            const data = {
+                keyword: keyword,
+                tone: document.getElementById('seo-tone').value,
+                platform: document.getElementById('seo-platform').value,
+                contentType: 'seo'
+            };
+            
+            try {
+                const btn = document.getElementById('generate-seo-btn');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                btn.disabled = true;
+                
+                const response = await fetch('/api/generate-seo-content', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    const content = result.content;
+                    const message = `✅ SEO Content Generated!${result.apiUsed ? ' (Via API)' : ''}\n\n📝 TITLE:\n${content.title}\n\n📄 DESCRIPTION:\n${content.description}\n\n🏷️ TAGS:\n${content.tags}\n\n💬 CAPTION:\n${content.caption}`;
+                    alert(message);
+                } else {
+                    alert('❌ Content generation failed: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ Content generation failed. Please try again.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-magic"></i> Generate SEO Content';
+            }
+        }
+
+        // Social Media Content Generation
+        async function handleSocialContent() {
+            const topic = document.getElementById('social-topic').value;
+            if (!topic) {
+                alert('Please enter a content topic');
+                return;
+            }
+            
+            const data = {
+                platform: document.getElementById('social-platform').value,
+                topic: topic,
+                tone: document.getElementById('social-tone').value
+            };
+            
+            try {
+                const btn = document.getElementById('generate-social-btn');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                btn.disabled = true;
+                
+                const response = await fetch('/api/generate-social-content', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    const content = result.content;
+                    const message = `✅ Social Media Content Generated!${result.apiUsed ? ' (Via API)' : ''}\n\n📱 POSTS:\n${content.posts.join('\n\n')}\n\n🏷️ HASHTAGS:\n${content.hashtags}\n\n💬 CAPTION:\n${content.caption}`;
+                    alert(message);
+                } else {
+                    alert('❌ Content generation failed: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ Content generation failed. Please try again.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-hashtag"></i> Generate Social Content';
+            }
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Initialize
+        showPage('home');
+    </script>
+</body>
+</html>
